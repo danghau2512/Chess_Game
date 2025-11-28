@@ -1,4 +1,6 @@
+package backend;
 import javax.swing.*;
+
 import java.awt.*;
 
 public class ChessTable extends JFrame {
@@ -39,13 +41,13 @@ public class ChessTable extends JFrame {
 
     private void showGameSetupDialog() {
         GameSetupDialog dialog = new GameSetupDialog(this);
-        GameSetup setup = dialog.showDialog();  // block cho đến khi bấm OK/Cancel
+        GameSetup setup = dialog.showDialog();
         if (setup != null) {
             this.currentSetup = setup;
             System.out.println("White: " + setup.getWhiteType()
                     + " | Black: " + setup.getBlackType()
                     + " | Depth: " + setup.getSearchDepth());
-
+            
         }
     }
 }

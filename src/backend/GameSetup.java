@@ -1,3 +1,4 @@
+package backend;
 public class GameSetup {
     private final PlayerType whiteType;
     private final PlayerType blackType;

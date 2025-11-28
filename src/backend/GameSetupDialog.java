@@ -1,4 +1,6 @@
+package backend;
 import javax.swing.*;
+
 import java.awt.*;
 
 public class GameSetupDialog extends JDialog {
@@ -15,7 +17,7 @@ public class GameSetupDialog extends JDialog {
         super(owner, "Tùy chỉnh", true); // modal
                 setLayout(new BorderLayout());
 
-        // ==== khối chọn White Player ====
+        //pannel chọn White Player
         JPanel whitePanel = new JPanel(new GridLayout(1, 2));
         whitePanel.setBorder(BorderFactory.createTitledBorder("Quân trắng"));
         whiteHuman = new JRadioButton("Người", true);
@@ -26,7 +28,7 @@ public class GameSetupDialog extends JDialog {
         whitePanel.add(whiteHuman);
         whitePanel.add(whiteComputer);
 
-        // ==== khối chọn Black Player ====
+        //pannel chọn Black Player
         JPanel blackPanel = new JPanel(new GridLayout(1, 2));
         blackPanel.setBorder(BorderFactory.createTitledBorder("Quân đen"));
         blackHuman = new JRadioButton("Người");
@@ -37,10 +39,10 @@ public class GameSetupDialog extends JDialog {
         blackPanel.add(blackHuman);
         blackPanel.add(blackComputer);
 
-        // ==== khối chọn Depth ====
+        //pannel chọn Depth
         JPanel depthPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         depthPanel.setBorder(BorderFactory.createTitledBorder("Chọn độ sâu"));
-        depthSpinner = new JSpinner(new SpinnerNumberModel(3, 1, 10, 1));
+        depthSpinner = new JSpinner(new SpinnerNumberModel(3, 1, 10, 1));				//spinner number model là gì đây
         Dimension d = depthSpinner.getPreferredSize();
         d.width = 100;
         depthSpinner.setPreferredSize(d);
@@ -68,7 +70,7 @@ public class GameSetupDialog extends JDialog {
         buttonsPanel.add(cancelButton);
         buttonsPanel.add(okButton);
 
-        // ==== layout ====
+        //layout
         JPanel center = new JPanel();
         center.setLayout(new BoxLayout(center, BoxLayout.Y_AXIS));
         center.add(whitePanel);

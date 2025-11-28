@@ -1,4 +1,7 @@
 import javax.swing.*;
+
+import backend.PieceImages;
+
 import java.awt.*;
 
 public class BoardPanel extends JPanel {
@@ -26,7 +29,7 @@ public class BoardPanel extends JPanel {
             tiles[1][col].setPieceIcon(PieceImages.BP); // hàng 2
         }
 
-        // Quân trắng hàng cuối (row 7)
+        // quân trắng hàng cuối (row 7)
         tiles[7][0].setPieceIcon(PieceImages.WR);
         tiles[7][7].setPieceIcon(PieceImages.WR);
         tiles[7][1].setPieceIcon(PieceImages.WN);
@@ -36,7 +39,7 @@ public class BoardPanel extends JPanel {
         tiles[7][3].setPieceIcon(PieceImages.WQ);
         tiles[7][4].setPieceIcon(PieceImages.WK);
 
-        // Quân đen hàng đầu (row 0)
+        // quân đen hàng đầu (row 0)
         tiles[0][0].setPieceIcon(PieceImages.BR);
         tiles[0][7].setPieceIcon(PieceImages.BR);
         tiles[0][1].setPieceIcon(PieceImages.BN);
